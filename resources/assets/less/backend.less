@@ -1,0 +1,36 @@
+// out: ../../../public_html/assets/css/backend.css, sourcemap: true, compress: false
+
+@import "../../../node_modules/bootstrap4-less/dist/bootstrap.less";
+
+// *{
+//   padding: 0;
+//   margin: 0;
+// }
+.hide-outline{
+  border:none;
+  box-shadow: none;
+  outline: none;
+}
+.editor{
+  .make-md-column(7);
+}
+.editor-title{
+  .form-control;
+  .input-lg;
+  .hide-outline;
+}
+.editor-title:active,.editor-title:focus{
+  .hide-outline;
+}
+.editor-body{
+  .form-control;
+  .hide-outline;
+  width:100%;
+  height:100%;
+  box-sizing: border-box;         /* For IE and modern versions of Chrome */
+  -moz-box-sizing: border-box;    /* For Firefox                          */
+  -webkit-box-sizing: border-box;
+}
+.editor-body:active,.editor-body:focus{
+    .hide-outline;
+}
