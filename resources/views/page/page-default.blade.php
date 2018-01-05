@@ -32,6 +32,10 @@
 						The Analytical Writing Assessment (AWA) measures your ability to think critically and to communicate your ideas. During the AWA, you are asked to analyze the reasoning behind a given argument and write a critique of that argument.
 					</div>
 				</div>
+
+				<div class="col-md-10 col-md-offset-1">
+					<center><i style="color:gray;">Note. Please use this Application in Desktop Version for better user expirience.</i></center>
+				</div>
 				{{-- </div>{{-- end of index-row --}}
 				<div class="col-md-10 col-md-offset-1" style="padding:15px;margin 15px;">
 					<center> &copy; Copyrights Edushastra Knowledge House.</center>
