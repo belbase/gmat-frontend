@@ -61,7 +61,6 @@
 				});
 				$('div.index-cell').height(maxheight);
     }).resize();
-
       });
     </script>
 </body>
