@@ -11,8 +11,6 @@
 								<input type="hidden" name="_token" class="token" value="{{ csrf_token() }}">
 								<input class="radio hidden" value="2" type="radio" name="preference" checked required/>
 								<input type="hidden" name="exam" value="Analytical Writing Assessment (AWA) Mock Test">
-							{{-- </td>
-							<td> --}}
 								<b style="font-size:20px;">Analytical Writing Assessment (AWA)</b></td>
 							<td><button type="submit" class="btn btn-primary" name="button"><b>Start</b></button>	</td>
 						</form>
