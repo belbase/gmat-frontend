@@ -18,7 +18,7 @@ class Session extends Model
    {
        return $this->hasOne('App\Model\Questions','qid','qid');
    }
-   public function users()
+   public function user()
     {
         return $this->hasOne('App\User','id','uid');
     }

@@ -54,36 +54,48 @@
                               </div>
                               @if (!empty($value->answer))
                               <div class="modal-footer">
-                                {{-- <div class="form-group row">
-                                  <input type="number" name="" class="form-control" size="3" required>
-                                </div> --}}
-                                {{-- <div class="row"> --}}
-                                  <form class="" action="/dashboard/review/change" method="post">
+
+                                  {{-- <form class="" action="/dashboard/review/change" method="post">
                                     {!! csrf_field() !!}
                                     <input type="hidden" name="refid" value="{{ $value->refid }}">
                                     <input type="hidden" name="status" value="p">
                                     <input type="hidden" name="db" value="{{ $db }}">
 
                                     <button type="submit" class="btn btn-success" >Suffient!</button>
-                                  </form>
-                                {{-- </div>
-                                <div class="row"> --}}
-                                  <form class="" action="/dashboard/review/change" method="post">
+                                  </form> --}}
+
+                                  {{-- <form class="" action="/dashboard/review/change" method="post">
                                     {!! csrf_field() !!}
                                     <input type="hidden" name="refid" value="{{ $value->refid }}">
                                     <input type="hidden" name="status" value="f">
                                     <input type="hidden" name="db" value="{{ $db }}">
                                     <button type="submit" class="btn btn-danger" >Not Suffient!</button>
 
+                                  </form> --}}
+                                  <form class="" action="/dashboard/review/change" method="post">
+                                    {!! csrf_field() !!}
+                                    <input type="hidden" name="refid" value="{{ $value->refid }}">
+                                    <input type="hidden" name="status" value="f">
+                                    <input type="hidden" name="db" value="{{ $db }}">
+                                    <select name="score" class="custom-select mb-2 mr-sm-2 mb-sm-0" required>
+                                      <option value="0">0</option>
+                                      <option value="1">1</option>
+                                      <option value="2">2</option>
+                                      <option value="3">3</option>
+                                      <option value="4">4</option>
+                                      <option value="5">5</option>
+                                      <option value="6">6</option>
+                                    <select>
+                                      <button type="submit" class="btn btn-primary">Submit</button>
                                   </form>
-                                {{-- </div> --}}
+
                               </div>
                             @endif
                             </div>
                           </div>
                         </div>
                     </td>
-                    <td><a href="mailto:{{ $value->users->email }}">{{ $value->users->name }}</a></td>
+                    <td>{{ $value->user->name }}</td>
                     {{-- <td></td> --}}
                     <td>{{ \App\Helper\ReviewStatus::statusVal($value->result) }}</td>
                     <td>{{ $value->time_taken }}</td>
