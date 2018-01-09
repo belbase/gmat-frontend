@@ -11,7 +11,7 @@
      return this;
   }
   function pageRedirect() {
-      $("form.main *").children().removeAttr('required');
+      $("form.exam *").children().removeAttr('required');
       $('#next').click();
     }
   function countdown_timer(timestamp='00:01:00',id="timer"){
