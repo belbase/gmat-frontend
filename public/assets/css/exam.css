@@ -6571,10 +6571,20 @@ button.close {
   }
 }
 .lower-header {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   color: #fff;
   background-color: #7dafe1;
   border: 2px solid #fff;
   height: 5%;
+}
+@media (min-width: 992px) {
+  .lower-header {
+    float: left;
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   .lower-header {
@@ -6618,7 +6628,17 @@ button.close {
   }
 }
 .paragraph {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
   height: 100%;
+}
+@media (min-width: 992px) {
+  .paragraph {
+    float: left;
+    width: 100%;
+  }
 }
 .division {
   position: relative;
