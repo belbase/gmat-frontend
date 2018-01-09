@@ -24,32 +24,28 @@
   <body background="{{ asset('/assets/img/background.jpg') }}">
     <div class="container">
       <div class="row">
-        <main class="col-md-10 col-md-offset-1" id="doc">
-          <section class=" col-md-12">
+        <main class="doc">
+          <section class="header">
 
               @include('layout.partial.title')
 
                 @include('layout.partial.timer')
 
           </section>
-          <section class="lower-header col-md-12">
-            <div class="pull-right">
+          <section class="lower-header">
+            <div class="pull-right flag">
               {{-- <span class="fa fa-flag-o"> Flag Your Question Here</span> --}}
             </div>
           </section>
-          <section class="main col-md-12">
+          <section class="main">
             @yield('layouts')
           </section>
-          <section class="footer col-md-12">
-            <div class="pull-left col-md-6">
+          <section class="footer">
               <form class="" action="/practice/exam/end" method="post">
                 {{ csrf_field() }}
-                <button type="submit" value="end" name="end" class="btn btn-panel pull-left"> <span class="fa fa-sign-out"> Exit Exam</span> </button>
+                <button type="submit" value="end" name="end" class="btn-end"> <span class="fa fa-sign-out"> Exit Exam</span> </button>
               </form>
-            </div>
-            <div class="pull-right col-md-6">
-              <button type="submit" value="next" form="target" name="next" id="next" class="pull-right btn btn-panel"> <span class="fa fa-arrow-right"> Next</span> </button>
-            </div>
+              <button type="submit" value="next" form="target" name="next" id="next" class="btn-next"> <span class="fa fa-arrow-right"> Next</span> </button>
           </section>
         </main>
       </div>
@@ -61,7 +57,7 @@
       $(document).ready(function(){
         $(window).resize(function() {
         var bodyheight = $(this).height();
-        $("#doc").height(bodyheight);
+        $(".doc").height(bodyheight);
         $(".overlap").height(bodyheight-"400px")
     }).resize();
     if($("#target").length == 0) {

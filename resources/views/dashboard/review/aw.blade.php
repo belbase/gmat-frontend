@@ -54,24 +54,6 @@
                               </div>
                               @if (!empty($value->answer))
                               <div class="modal-footer">
-
-                                  {{-- <form class="" action="/dashboard/review/change" method="post">
-                                    {!! csrf_field() !!}
-                                    <input type="hidden" name="refid" value="{{ $value->refid }}">
-                                    <input type="hidden" name="status" value="p">
-                                    <input type="hidden" name="db" value="{{ $db }}">
-
-                                    <button type="submit" class="btn btn-success" >Suffient!</button>
-                                  </form> --}}
-
-                                  {{-- <form class="" action="/dashboard/review/change" method="post">
-                                    {!! csrf_field() !!}
-                                    <input type="hidden" name="refid" value="{{ $value->refid }}">
-                                    <input type="hidden" name="status" value="f">
-                                    <input type="hidden" name="db" value="{{ $db }}">
-                                    <button type="submit" class="btn btn-danger" >Not Suffient!</button>
-
-                                  </form> --}}
                                   <form class="" action="/dashboard/review/change" method="post">
                                     {!! csrf_field() !!}
                                     <input type="hidden" name="refid" value="{{ $value->refid }}">
