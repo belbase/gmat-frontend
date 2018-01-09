@@ -51,7 +51,7 @@
       </div>
     </div>
     {{-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> --}}
-    <script src="{!! asset('assets/js/scripts.js') !!}"></script>
+    <script src="{!! asset('assets/js/script.js') !!}"></script>
 
     <script type="text/javascript">
       $(document).ready(function(){
