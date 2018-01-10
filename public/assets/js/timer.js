@@ -49,6 +49,7 @@
         timeout="00:"+ pad(parseInt(totalSeconds / 60)) + ":" + pad(totalSeconds % 60);
           clearInterval(x);
           $("#"+id).html("Time-up");
+          $("#"+id+"-alt").html("Time-up");
           $("#timer_field").val(timeout);
           $("#countdown_field").val(timeout);
           pageRedirect();
@@ -56,6 +57,7 @@
       else{
 
         $("#"+id).html(" "+hours +":"+ minutes + ":" + seconds);
+        $("#"+id+"-alt").html(" "+hours +":"+ minutes + ":" + seconds);
         $("#countdown_field").val(" "+hours +":"+ minutes + ":" + seconds);
         $("#timer_field").val("00:"+ pad(parseInt(totalSeconds / 60)) + ":" + pad(totalSeconds % 60));
       }

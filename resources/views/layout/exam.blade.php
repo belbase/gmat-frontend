@@ -41,11 +41,26 @@
             @yield('layouts')
           </section>
           <section class="footer">
-              <form class="" action="/practice/exam/end" method="post">
+            <div class="footer-col">
+              <form action="/practice/exam/end" method="post">
                 {{ csrf_field() }}
-                <button type="submit" value="end" name="end" class="btn-end"> <span class="fa fa-sign-out"> Exit Exam</span> </button>
+                <button type="submit" value="end" name="end" class="btn-end"> <span class="fa fa-sign-out"> <span class="hidden-xs">Exit Exam</span></span> </button>
               </form>
-              <button type="submit" value="next" form="target" name="next" id="next" class="btn-next"> <span class="fa fa-arrow-right"> Next</span> </button>
+            </div>
+            <div class="timmer-alt">
+              <center>
+                @if(isset($gt))
+                  <span class="fa fa-clock-o" id="timer-alt"></span>
+                @endif
+                <br/>
+                @if(isset($qno))
+                  <span class="fa fa-print"> {{ $qno }} of {{ $aq }}</span><br/>
+                @endif
+              </center>
+            </div>
+            <div class="footer-col">
+              <button type="submit" value="next" form="target" name="next" id="next" class="btn-next"> <span class="fa fa-arrow-right"> <span class="hidden-xs"> Next</span></span> </button>
+            </div>
           </section>
         </main>
       </div>

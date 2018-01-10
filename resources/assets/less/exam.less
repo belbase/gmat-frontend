@@ -9,9 +9,6 @@
 .grey{
   background-color: #ccc;
   border-radius: 10px;
-  // padding: 10px;
-  // margin: 10px;
-
 }
 .doc{
   .make-md-column(10);
@@ -32,9 +29,6 @@
   background-color:#7dafe1;
   border:2px solid #fff;
   height:5%;
-}
-.timer{
-  // padding:10px;
 }
 .main{
   .make-md-column(12);
@@ -69,7 +63,13 @@
   background-color: #006eae;
   color:#fff;
   border-radius: 0;
-  border:3px solid #fff;
+  @media screen and (max-width: 768px){
+    border:none;
+    font-size: 23px;
+  }
+  @media screen and (min-width: 768px){
+    border:3px solid #fff;
+  }
 }
 .btn-next{
   .pull-right;
@@ -80,4 +80,45 @@
    .btn;
    .btn-panel;
    .pull-left;
+}
+.title{
+  @media screen and (max-width: 768px){
+    font-size: 15px;
+  }
+  @media screen and (min-width: 768px){
+    font-size: 20px;
+  }
+  padding: 5px;
+  color:#fff;
+}
+.timer{
+  @media screen and (max-width: 768px){
+    .hidden;
+  }
+  @media screen and (min-width: 768px){
+
+  }
+  color:#fff;
+}
+.footer-col{
+  @media screen and (max-width: 768px){
+    .make-xs-column(3);
+  }
+  @media screen and (max-width: 992px){
+    .make-sm-column(6);
+  }
+  @media screen and (max-width: 1200px){
+    .make-md-column(6);
+  }
+  @media screen and (min-width: 1200px){
+    .make-lg-column(6);
+  }
+
+}
+.timmer-alt{
+  .make-xs-column(6);
+  color:#fff;
+  @media screen and (min-width: 768px){
+    .hidden;
+  }
 }
