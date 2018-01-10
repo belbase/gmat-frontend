@@ -26,7 +26,9 @@ Route::get('/practice/exam/question', 'QuestionController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
-Route::any('/test', 'ExamController@test');
+Route::any('/test', function(){
+  return view('error.404');
+});
 // Route::any('/test1','QuestionController@test1');
 // Route::any('/test2','QuestionController@test2');
 \App\Http\Controllers\DashboardController::routes();
