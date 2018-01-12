@@ -19,7 +19,13 @@
 .header{
   .make-md-column(12);
     color:#fff;
-   height:10%;
+   @media screen and (min-width: 768px){
+     height:10%;
+     overflow-x:hidden;
+   }
+   @media screen and (max-width: 768px){
+     height:15%;
+   }
 }
 .lower-header{
   .make-md-column(12);
@@ -32,17 +38,28 @@
 }
 .main{
   .make-md-column(12);
-  height:75%;
   background-color:#fff;
   margin-top:5px;
   overflow-y: auto;
+  @media screen and (min-width: 768px){
+    height:75%;
+  }
+  @media screen and (max-width: 768px){
+    height:60%;
+  }
   // overflow-x: auto;
 }
 .footer {
   .make-md-column(12);
   padding-top:5px;
-  height:5%
-  border:red solid 1px;
+  // border:red solid 1px;
+  @media screen and (min-width: 768px){
+    height:10%;
+    overflow-x:hidden;
+  }
+  @media screen and (max-width: 768px){
+    height:15%;
+  }
 }
 .paragraph{
   .make-md-column(12);
@@ -88,9 +105,9 @@
    .btn-panel;
    .pull-left;
 }
-.title{
+h1, .h1, .title{
   @media screen and (max-width: 768px){
-    font-size: 16px;
+    font-size: 17px;
   }
   @media screen and (min-width: 768px){
     font-size: 20px;

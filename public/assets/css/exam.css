@@ -6562,12 +6562,22 @@ button.close {
   padding-left: 15px;
   padding-right: 15px;
   color: #fff;
-  height: 10%;
 }
 @media (min-width: 992px) {
   .header {
     float: left;
     width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 10%;
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    height: 15%;
   }
 }
 .lower-header {
@@ -6601,7 +6611,6 @@ button.close {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
-  height: 75%;
   background-color: #fff;
   margin-top: 5px;
   overflow-y: auto;
@@ -6612,19 +6621,38 @@ button.close {
     width: 100%;
   }
 }
+@media screen and (min-width: 768px) {
+  .main {
+    height: 75%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .main {
+    height: 60%;
+  }
+}
 .footer {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 5px;
-  height: 5%
-  border:red solid 1px;
 }
 @media (min-width: 992px) {
   .footer {
     float: left;
     width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    height: 10%;
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 15%;
   }
 }
 .paragraph {
@@ -6831,16 +6859,22 @@ fieldset[disabled] .btn-end {
     border: 3px solid #fff;
   }
 }
+h1,
+.h1,
 .title {
   padding: 5px;
   color: #fff;
 }
 @media screen and (max-width: 768px) {
+  h1,
+  .h1,
   .title {
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 @media screen and (min-width: 768px) {
+  h1,
+  .h1,
   .title {
     font-size: 20px;
   }
