@@ -6654,6 +6654,26 @@ button.close {
     width: 100%;
   }
 }
+.passage {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-height: 50%;
+  overflow-y: auto;
+}
+@media (min-width: 992px) {
+  .passage {
+    float: left;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .passage {
+    height: 280px;
+    overflow-x: hidden;
+  }
+}
 .overlap {
   height: 300px;
   overflow-y: scroll;
@@ -6817,7 +6837,7 @@ fieldset[disabled] .btn-end {
 }
 @media screen and (max-width: 768px) {
   .title {
-    font-size: 15px;
+    font-size: 16px;
   }
 }
 @media screen and (min-width: 768px) {

@@ -15,7 +15,13 @@
       @foreach ($result as $item)
         <tr class='{{ ($item->result=="p")?"success":(($item->result=="f")?"danger":"warning") }}'>
           <td>{{ $count }}</td>
-          <td>{{ \App\Model\Questions::find($item->qid)->title }}</td>
+          <td>
+            
+              {{ "Question - ".$count }}
+
+            <!-- Modal -->
+
+          </td>
           <td>{{ \App\Helper\SectionArray::getName($item->sec_id) }}</td>
           <td>{!! ($item->result=="p")?"Right!":(($item->result=="f")?"Wrong!":(($item->result=="n")?"Saved For Review":"<span class='fa fa-hourglass'><span>Time-out")) !!}</td>
           <td>{!! $item->time_taken !!}</td>
@@ -27,5 +33,11 @@
     </table>
   </div>
           {{-- {!! (isset($title))?"<span class='h2'> ".$title."</span>":"" !!} --}}
+
+@stop
+@section('css')
+
+@stop
+@section('js')
 
 @stop

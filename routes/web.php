@@ -27,7 +27,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::any('/test', function(){
-  return view('error.404');
+  // return view('test');
 });
 // Route::any('/test1','QuestionController@test1');
 // Route::any('/test2','QuestionController@test2');
