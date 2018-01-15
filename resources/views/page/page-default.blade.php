@@ -15,7 +15,7 @@
 							<td><button type="submit" class="btn btn-primary" name="button"><b>Start</b></button>	</td>
 						</form>
 						</tr>
-						{{-- <tr>
+						<tr>
 							<form id="target" action="/practice/exam/preference" method="post">
 							<td>
 								<input type="hidden" name="_token" class="token" value="{{ csrf_token() }}">
@@ -24,7 +24,7 @@
 								<b style="font-size:20px;">Verbal  (VB)</b></td>
 							<td><button type="submit" class="btn btn-primary" name="button"><b>Start</b></button>	</td>
 						</form>
-						</tr> --}}
+						</tr>
 					</table>
 					<div class="col-md-12 well well-lg">
 						The Analytical Writing Assessment (AWA) measures your ability to think critically and to communicate your ideas. During the AWA, you are asked to analyze the reasoning behind a given argument and write a critique of that argument.

@@ -34,22 +34,19 @@ use App\Helper\SectionArray;
     // submit All requests here
     if(url()->previous()==url("/practice/exam/instructions")){
 
-      $sid=$request->session()->get('section');
+      $sid = $request->session()->get('section');
       $section=\App\Model\Section::find($sid);
       $request->session()->put('time',$section->time_taken);
-
+      echo "sid";
       // Plucking the qid array in array variable
-      $array=\App\Model\Questions::where('sec_id','=',$sid)->pluck('qid')->toArray();
-      $rand=\App\Helper\RandomNumber::fromArray($array);
-      if(!$rand){
+      $rand= new \App\Helper\RandomNumber($request);
+      $randomise = $rand->fromArray();
+
+      if($randomise==false){
         return redirect('/practice/exam/switch');
       }
-      $request->session()->put('qid',$rand);
-      $new = [];
-      $new[]=$rand;
-      $request->session()->put('qid_array',$new);
-      // $request->session()->put('qid','1');
       return redirect('/practice/exam/question');
+      var_dump($request->session()->all());
     }
     else{
       $this->store($request);
@@ -64,20 +61,23 @@ use App\Helper\SectionArray;
         $array=\App\Model\Questions::where('sec_id','=',$sid)->pluck('qid')->toArray();
 
         //Randomize the Question
-        $rand=\App\Helper\RandomNumber::fromArray($array,$qid_array);
+        $rand= new \App\Helper\RandomNumber($request);
+        $randomise = $rand->fromArray();
 
         // Switch the section if no rendom variable left
-          if(!$rand){
-            return redirect('/practice/exam/switch');
-          }
+        if($randomise==false){
+          return redirect('/practice/exam/switch');
+        }
+        else{
+              return redirect('/practice/exam/question');
+        }
 
           // store the random no to qid and qid_array
-          else{
-            $qid_array[]=$rand;
-              $request->session()->put('qid_array',$qid_array);
-              $request->session()->put('qid',$rand);
-              return redirect('/practice/exam/question');
-          }
+          // else{
+          //     $qid_array[]=$randomise;
+          //     $request->session()->put('qid_array',$qid_array);
+          //     $request->session()->put('qid',$randomise);
+          // }
       }
 
     }
@@ -180,6 +180,8 @@ use App\Helper\SectionArray;
       if($request->session()->has('section'))$request->session()->forget('section');
       if($request->session()->has('qid_array'))$request->session()->forget('qid_array');
       if($request->session()->has('time'))$request->session()->forget('time');
+      if($request->session()->has('result'))$request->session()->forget('result');
+      if($request->session()->has('dif'))$request->session()->forget('dif');
       return redirect('/practice/exam/result');
   }
   public function test(Request $request){

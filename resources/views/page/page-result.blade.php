@@ -7,6 +7,7 @@
         <th>Question</th>
         <th>Section</th>
         <th>Result</th>
+        <th>Difficulty</th>
         <th>Time Taken</th>
       </tr>
       <?php
@@ -16,7 +17,7 @@
         <tr class='{{ ($item->result=="p")?"success":(($item->result=="f")?"danger":"warning") }}'>
           <td>{{ $count }}</td>
           <td>
-            
+
               {{ "Question - ".$count }}
 
             <!-- Modal -->
@@ -24,6 +25,7 @@
           </td>
           <td>{{ \App\Helper\SectionArray::getName($item->sec_id) }}</td>
           <td>{!! ($item->result=="p")?"Right!":(($item->result=="f")?"Wrong!":(($item->result=="n")?"Saved For Review":"<span class='fa fa-hourglass'><span>Time-out")) !!}</td>
+          <td>{!! \App\Helper\DifficultyLevel::get($item->question->dif) !!}</td>
           <td>{!! $item->time_taken !!}</td>
         </tr>
         <?php

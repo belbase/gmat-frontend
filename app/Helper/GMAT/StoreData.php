@@ -64,8 +64,10 @@ class StoreData{
     if(isset($result)) {
         $this->db->answer = $result;
         $this->db->result = CheckAnswer::checkVB($request->session()->get('qid'),$result);
+        $request->session()->put('result',CheckAnswer::checkVB($request->session()->get('qid'),$result));
+        $request->session()->put('dif',$this->db->question->dif);
     }
-    if(!isset($result))$this->db->result='t';
+    else $this->db->result='t';
     $this->db->time_taken = $time;
     // $this->db->status=1;
     $this->db->save();
