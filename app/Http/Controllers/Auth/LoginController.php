@@ -59,7 +59,7 @@ class LoginController extends Controller
   public function showLoginForm()
   {
       return view('auth.login')->with([
-        'title'=>'Login'
+        'title'=>'	GMAT CAT GMCAT SAT Online Evaluation Tests | EduShastra |Philanthropic Idea'
       ]);
   }
 
