@@ -31,4 +31,4 @@ Route::any('/test', function(){
 });
 // Route::any('/test1','QuestionController@test1');
 // Route::any('/test2','QuestionController@test2');
-\App\Http\Controllers\DashboardController::routes();
+// \App\Http\Controllers\DashboardController::routes();
