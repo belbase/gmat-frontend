@@ -1,4 +1,5 @@
 @extends('layout.main')
+@section('meta_description','GMAT CAT GMCAT SAT Online Computer Adaptive Tests | Money-back Promise | Batch Size 5 or 7, No Herd Teaching | Unlimited Tests-CATs till 750+ Score. Unlimited Mock CATs till 99%ile')
 @section('layouts')
 	<center><h3>Sign In</h3></center>
 					<br><br>
